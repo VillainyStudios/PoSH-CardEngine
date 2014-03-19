@@ -12,7 +12,7 @@ $deck = $spades + $diamonds + $hearts + $clubs
 $pool = ($deck.length)
 $hand = 
 
-# Basic loop to cycle through and remove all cards in $deck
+# Basic function to draw cards
 function draw {
     param ($climb)
     
@@ -29,4 +29,6 @@ function draw {
         
     }
 }
+
+# Example of drawing three cards
 draw 3
