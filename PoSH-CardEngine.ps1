@@ -18,14 +18,13 @@ function draw {
     
     for ($i=1; $i -le $climb; $i++){
         $card = ""
-        $global:hand = 
+        $hand = 
         
         $card = ($deck | get-random)
-        $hand = $hand |? {$_ -eq $card}
+        $global:hand = $hand |? {$_ -eq $card}
         $deck = $deck |? {$_ -ne $card}
         
-        
-        $hand
+        $global:hand
         
     }
 }
