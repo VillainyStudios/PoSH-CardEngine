@@ -27,7 +27,7 @@ function draw {
         $global:hand
     }
 }
-draw 2
+$hand = draw 2
  
 # Basic loop to cycle through and remove all cards in $deck
 #foreach ($card in $deck){
