@@ -31,3 +31,15 @@ function draw {
 
 # Example of drawing three cards
 draw 3
+ 
+# Basic loop to cycle through and remove all cards in $deck
+#foreach ($card in $deck){
+    #$card = ""
+    #$hand = ""
+ 
+ 
+    #$card = ($deck | get-random)
+    #$card
+    #$deck = $deck |? {$_ -ne $card}
+ 
+#}
