@@ -12,7 +12,7 @@ $deck = $spades + $diamonds + $hearts + $clubs
 $pool = ($deck.length)
 $hand = 
 
-# Basic function to draw cards
+# Basic loop to cycle through and remove all cards in $deck
 function draw {
     param ($climb)
     
@@ -21,16 +21,13 @@ function draw {
         $hand = 
         
         $card = ($deck | get-random)
-        $global:hand = $hand |? {$_ -eq $card}
-        $deck = $deck |? {$_ -ne $card}
-        
+        $global:hand = $hand |? {$_ + $card}
+        $global:deck = $global:deck |? {$_ -ne $card}
+        #$card
         $global:hand
-        
     }
 }
-
-# Example of drawing three cards
-draw 3
+draw 2
  
 # Basic loop to cycle through and remove all cards in $deck
 #foreach ($card in $deck){
